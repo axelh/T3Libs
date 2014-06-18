@@ -51,7 +51,7 @@ public:
     // =====================================================
     // Query network infos from last reinit
     
-    uint8_t geNodetId(){ return nodeId; }
+    uint8_t geNodeId(){ return nodeId; }
     uint8_t getGroup() { return groupId; }
     uint8_t getBand()  { return bandId; }
     
