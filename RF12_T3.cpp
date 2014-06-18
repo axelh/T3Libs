@@ -100,6 +100,7 @@ inline uint16_t RF12_T3::rf12_xfer(uint16_t data) {
     digitalWriteFast(10, LOW);
     SPI0_PUSHR = (1<<26) | data;    // send data (clear transfer counter)
     while (! SPI0_TCR) ; // loop until transfer is complete
+    delayMicroseconds(1); // fix issue #11
     digitalWriteFast(10, HIGH);
     return SPI0_POPR;
 }
