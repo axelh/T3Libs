@@ -86,6 +86,7 @@ int RF12_T3::reinit(uint8_t id, uint8_t band, uint8_t group, uint8_t rate) {
     // requesting RFM12b reset
     rf12_xfer(0xCA82); // enable software reset
     rf12_xfer(0xFE00); // do software reset
+    delay(100); // wait 100ms while device is reseting
 }
 
 
